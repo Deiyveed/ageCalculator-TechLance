@@ -101,6 +101,15 @@ if(dobYear.length < 4) {
 
 document.getElementById('age').innerHTML = `You are ${yearAge} years, ${monthAge} months, ${dateAge} days old`;
 
+if(yearAge < 18){
+    return Swal.fire({
+        title: 'Error!',
+        text: 'Sorry! You are ineligible for this job. You have to be above 18 years',
+        icon: 'error',
+        confirmButtonText: 'Okay'
+      }) 
+}
+
 if(yearAge >= 27){
     return Swal.fire({
         title: 'Error!',
